@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє Резюме</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+
+    <style>
+        .status-badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #3730a3;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            border: 1px solid #c7d2fe;
+            margin-top: 4px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-wrapper">
+        <header id="main-header" class="header-card">
+            <div class="header-content">
+                <div class="header-main-info">
+                    <h1>Кулешко Анастасія Ростиславівна</h1>
+                    <span class="status-badge">Спеціалістка з кібербезпеки зі знанням Python та C#</span>
+                    <div>
+                        <button id="theme-toggle-btn" type="button">Змінити тему 🌙/☀️</button>
+                    </div>
+                </div>
+                <div class="header-contact-details">
+                    <p><strong>Вік:</strong> 18 років</p>
+                    <p><strong>Місто:</strong> м. Львів</p>
+                    <p><strong>Тел.:</strong> <a href="tel:+380675438208">+380 (67) 543-82-08</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:anastasiakulesko@gmail.com">anastasiakulesko@gmail.com</a></p>
+                </div>
+            </div>
+        </header>
+
+        <main class="resume-grid">
+            <section class="card" id="about-section">
+                <h2>Про мене</h2>
+                <p>Студентка, вивчаю комп'ютерні технології.</p>
+            </section>
+
+            <section class="card" id="education-section">
+                <h2>Освіта</h2>
+                <ul class="styled-list">
+                    <li>Університет: Національний университет &quot;Львівська політехніка&quot;</li>
+                    <li>Інститут: Інститут комп'ютерних технологій, автоматики та метрології (ІКТА)</li>
+                    <li>Спеціальність: Кібербезпека</li>
+                </ul>
+            </section>
+
+            <section class="card" id="skills-section">
+                <h2>Навички</h2>
+                <ul class="styled-list">
+                    <li>Мови програмування: Python, C#</li>
+                    <li>Мережеві технології: налаштування базових топологій у Cisco Packet Tracer (комутатори, маршрутизатори, точки доступу)</li>
+                    <li>Інструменти: Git, GitHub, VS Code</li>
+                    <li>Мови: українська (рідна), англійська (середній рівень, B1)</li>
+                </ul>
+            </section>
+
+            <section class="card full-width" id="projects-section">
+                <h2>Досвід та проєкти</h2>
+                <ul class="projects-list">
+                    <li class="project-item">
+                        <strong class="project-title">Навчальний проєкт: Локальна комп'ютерна мережа</strong>
+                        <p>Проєктування та тестування топології мережі в середовищі Cisco Packet Tracer: налаштування адресації, бездротового зв'язку та комутації обладнання.</p>
+                    </li>
+                    <li class="project-item">
+                        <strong class="project-title">Проєкт на Python: Консольна утиліта</strong>
+                        <p>Розробка скрипту для автоматизації обробки текстових файлів та базових обчислень.</p>
+                    </li>
+                    <li class="project-item">
+                        <strong class="project-title">Веброзробка: Вебсторінка резюме (HTML / React)</strong>
+                        <p>Створення семантичної розмітки сторінки за допомогою HTML5 та декомпозиція інтерфейсу на React-компоненти з використанням Vite.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card full-width" id="reviews-section">
+                <h2>Коментарі роботодавців</h2>
+                <div id="comments-container">
+                    <p>Завантаження коментарів...</p>
+                </div>
+            </section>
+
+            <section class="card full-width" id="contacts-section">
+                <h2>Контакти</h2>
+                <p>Мій профіль: <a href="https://github.com/anastasiiakuleshkokb2025-glitch" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            </section>
+        </main>
+
+        <footer id="main-footer">
+            <p>2026 рік</p>
+
+            <div id="system-info" class="system-info-box">
+                <p><strong>Операційна система:</strong> <span id="os-details">Завантаження...</span></p>
+                <p><strong>Браузер:</strong> <span id="browser-details">Завантаження...</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="contact-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background: #ffffff; padding: 24px; border-radius: 16px; max-width: 420px; width: 90%; position: relative; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);">
+            
+            <button id="close-modal-btn" type="button" style="position: absolute; top: 12px; right: 16px; border: none; background: transparent; font-size: 20px; cursor: pointer; color: #64748b;">✕</button>
+            
+            <h3 style="margin-top: 0; margin-bottom: 16px; color: #0f172a; font-size: 1.25rem;">Зворотний зв'язок</h3>
+            
+            <form action="https://formspree.io/f/mjyypekk" method="POST" id="feedback-form">
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 4px;">Ім'я:</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 4px;">Email:</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 4px;">Номер телефону:</label>
+                    <input type="tel" name="phone" required style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <label style="display: block; font-size: 0.875rem; font-weight: 600; color: #334155; margin-bottom: 4px;">Повідомлення:</label>
+                    <textarea name="message" rows="3" required style="width: 100%; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; resize: vertical;"></textarea>
+                </div>
+
+                <button type="submit" style="width: 100%; background: #2563eb; color: white; padding: 10px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
